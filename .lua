@@ -1591,8 +1591,8 @@ function library:init_window(cfg)
     utility.dragify(window_drag, dragoutline, window_main, drag_tween)
     
     -- // ESP PREVIEW
-    local esp_preview_window = utility.create("Square", {Parent = window_main; Size = UDim2.new(0, 231, 0, 339), Position = UDim2.new(1, 10, 0, 0), Color = Color3.fromRGB(12,12,9), Thickness = 1, Filled = true, ZIndex = 2}); do
-        local inline_outline = utility.outline(esp_preview_window, Color3.fromRGB(50,50,50), 4);
+    local esp_preview_window = utility.create("Square", {Parent = window_main; Size = UDim2.new(0, 231, 0, 339), Position = UDim2.new(1, 10, 0, 0), Color = Color3.fromRGB(208, 123, 255), Thickness = 1, Filled = true, ZIndex = 2}); do
+        local inline_outline = utility.outline(esp_preview_window, Color3.fromRGB(208, 123, 255), 4);
         utility.outline(inline_outline, Color3.fromRGB(0,0,0), 4);
 
         local window_title = utility.create("Text", {Text = "ESP Preview", Parent = esp_preview_window, Visible = true, Transparency = 1, Color = Color3.new(208, 123, 255), Size = 13, Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0,6,0,3), ZIndex = 6});
@@ -1602,15 +1602,15 @@ function library:init_window(cfg)
         end;
 
         -- // ESP head
-        local esp_head = utility.create("Square", {Parent = inner_window; Size = UDim2.new(0, 45, 0, 39), Position = UDim2.new(0, 91, 0, 85), Color = Color3.fromRGB(255, 255, 255), Thickness = 1, Filled = true, ZIndex = 5}); 
+        local esp_head = utility.create("Square", {Parent = inner_window; Size = UDim2.new(0, 45, 0, 39), Position = UDim2.new(0, 91, 0, 85), Color = Color3.fromRGB(208, 123, 255), Thickness = 1, Filled = true, ZIndex = 5}); 
         local esp_head_outline = utility.outline(esp_head, Color3.fromRGB(0, 0, 0), 4);
 
         -- // Toros
-        local esp_torso = utility.create("Square", {Parent = inner_window; Size = UDim2.new(0, 147, 0, 77), Position = UDim2.new(0, 39, 0, 125), Color = Color3.fromRGB(255, 255, 255), Thickness = 1, Filled = true, ZIndex = 5});
+        local esp_torso = utility.create("Square", {Parent = inner_window; Size = UDim2.new(0, 147, 0, 77), Position = UDim2.new(0, 39, 0, 125), Color = Color3.fromRGB(208, 123, 255), Thickness = 1, Filled = true, ZIndex = 5});
         local esp_torso_outline = utility.outline(esp_torso, Color3.fromRGB(0, 0, 0), 4);
 
         -- // Legs
-        local esp_legs = utility.create("Square", {Parent = inner_window; Size = UDim2.new(0, 73, 0, 78), Position = UDim2.new(0, 77, 0, 203), Color = Color3.fromRGB(255, 255, 255), Thickness = 1, Filled = true, ZIndex = 5});
+        local esp_legs = utility.create("Square", {Parent = inner_window; Size = UDim2.new(0, 73, 0, 78), Position = UDim2.new(0, 77, 0, 203), Color = Color3.fromRGB(208, 123, 255), Thickness = 1, Filled = true, ZIndex = 5});
         local esp_legs_outline = utility.outline(esp_legs, Color3.fromRGB(0, 0, 0), 4);
 
         -- // Position fix
@@ -1627,9 +1627,9 @@ function library:init_window(cfg)
         local esp_health_bar_outline = utility.outline(esp_health_bar, Color3.fromRGB(0, 0, 0), 4);
 
         -- // Text
-        local esp_name = utility.create("Text", {Text = "OnlyTwentyCharacters", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 25), ZIndex = 6});
-        local esp_distance = utility.create("Text", {Text = "0 meters", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 276), ZIndex = 6});
-        local esp_weapon = utility.create("Text", {Text = "Weapon", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 286), ZIndex = 6});
+        local esp_name = utility.create("Text", {Text = "Name", Parent = inner_window, Visible = true, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 25), ZIndex = 6});
+        local esp_distance = utility.create("Text", {Text = "0 meters", Parent = inner_window, Visible = true, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 276), ZIndex = 6});
+        local esp_weapon = utility.create("Text", {Text = "Weapon", Parent = inner_window, Visible = true, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 286), ZIndex = 6});
 
         -- // Functions
         settings.SetPreviewChamColor = function(Color, Outline, Alpha, AlphaOutline)
@@ -1686,22 +1686,12 @@ function library:init_window(cfg)
             esp_weapon.Transparency = Value and 1 or 0
         end
 
-        settings.TogglePreviewVisibility(false)
-        settings.SetPreviewBoxVisible(false)
-        settings.SetPreviewHealthBarVisible(false)
+        settings.TogglePreviewVisibility(true)
+        settings.SetPreviewBoxVisible(true)
+        settings.SetPreviewHealthBarVisible(true)
         settings.SetPreviewChamColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
         settings.SetPreviewBoxColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0));
     end;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     -- create pages
     function window_table:create_page(cfg)
