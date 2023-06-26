@@ -1629,7 +1629,7 @@ function library:init_window(cfg)
         local esp_health_bar_outline = utility.outline(esp_health_bar, Color3.fromRGB(0, 0, 0), 4);
 
         -- // Text
-        local esp_name = utility.create("Text", {Text = "OnlyTwentyCharacters", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 25), ZIndex = 6});
+        local esp_name = utility.create("Text", {Text = "Name", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 25), ZIndex = 6});
         local esp_distance = utility.create("Text", {Text = "0 meters", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 276), ZIndex = 6});
         local esp_weapon = utility.create("Text", {Text = "Weapon", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 286), ZIndex = 6});
 
@@ -1682,7 +1682,7 @@ function library:init_window(cfg)
         settings.SetPreviewBoxVisible(false)
         settings.SetPreviewDistanceProperty(false)
         settings.SetPreviewHealthBarVisible(false)
-        settings.SetPreviewChamColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
+        settings.SetPreviewChamColor(Color3.fromRGB(208, 123, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
         settings.SetPreviewBoxColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0));
     end;
     
