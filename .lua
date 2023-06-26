@@ -1627,9 +1627,9 @@ function library:init_window(cfg)
         local esp_health_bar_outline = utility.outline(esp_health_bar, Color3.fromRGB(0, 0, 0), 4);
 
         -- // Text
-        local esp_name = utility.create("Text", {Text = "Name", Parent = inner_window, Visible = true, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 25), ZIndex = 6});
-        local esp_distance = utility.create("Text", {Text = "0 meters", Parent = inner_window, Visible = true, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 276), ZIndex = 6});
-        local esp_weapon = utility.create("Text", {Text = "Weapon", Parent = inner_window, Visible = true, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 286), ZIndex = 6});
+        local esp_name = utility.create("Text", {Text = "Name", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 25), ZIndex = 6});
+        local esp_distance = utility.create("Text", {Text = "0 meters", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 276), ZIndex = 6});
+        local esp_weapon = utility.create("Text", {Text = "Weapon", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 286), ZIndex = 6});
 
         -- // Functions
         settings.SetPreviewChamColor = function(Color, Outline, Alpha, AlphaOutline)
@@ -1686,12 +1686,12 @@ function library:init_window(cfg)
             esp_weapon.Transparency = Value and 1 or 0
         end
 
-        settings.TogglePreviewVisibility(true)
-        settings.SetPreviewNameProperty(true)
-        settings.SetPreviewBoxVisible(true)
-        settings.SetPreviewDistanceProperty(true)
-        settings.SetPreviewWeaponProperty(true)
-        settings.SetPreviewHealthBarVisible(true)
+        settings.TogglePreviewVisibility(false)
+        settings.SetPreviewNameProperty(false)
+        settings.SetPreviewBoxVisible(false)
+        settings.SetPreviewDistanceProperty(false)
+        settings.SetPreviewWeaponProperty(false)
+        settings.SetPreviewHealthBarVisible(false)
         settings.SetPreviewChamColor(Color3.fromRGB(208, 123, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
         settings.SetPreviewBoxColor(Color3.fromRGB(208, 123, 255), Color3.fromRGB(0, 0, 0));
     end;
