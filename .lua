@@ -1689,8 +1689,8 @@ function library:init_window(cfg)
         settings.TogglePreviewVisibility(true)
         settings.SetPreviewBoxVisible(true)
         settings.SetPreviewHealthBarVisible(true)
-        settings.SetPreviewChamColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
-        settings.SetPreviewBoxColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0));
+        settings.SetPreviewChamColor(Color3.fromRGB(208, 123, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
+        settings.SetPreviewBoxColor(Color3.fromRGB(208, 123, 255), Color3.fromRGB(0, 0, 0));
     end;
     
     -- create pages
