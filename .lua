@@ -1666,16 +1666,16 @@ function library:init_window(cfg)
             esp_bounding_box_outline.Visible = Visible
         end
 
-        settings.SetPreviewNameProperty = function(Property, Value)
-            esp_name[Property] = Value
+        settings.SetPreviewNameProperty = function(Visible)
+            esp_name.Visible = Visible
         end
 
-        settings.SetPreviewDistanceProperty = function(Property, Value)
-            esp_distance[Property] = Value
+        settings.SetPreviewDistanceProperty = function(Visible)
+            esp_distance.Visible = Visible
         end
 
-        settings.SetPreviewWeaponProperty = function(Property, Value)
-            esp_weapon[Property] = Value
+        settings.SetPreviewWeaponProperty = function(Visible)
+            esp_weapon.Visible = Visible
         end
 
         settings.TogglePreviewVisibility = function(Value)
