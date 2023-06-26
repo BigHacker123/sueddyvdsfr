@@ -1688,9 +1688,9 @@ function library:init_window(cfg)
             esp_weapon.Transparency = Value and 1 or 0
         end
 
-        settings.TogglePreviewVisibility(false)
-        settings.SetPreviewBoxVisible(true)
-        settings.SetPreviewHealthBarVisible(true)
+        settings.TogglePreviewVisibility(true)
+        settings.SetPreviewBoxVisible(false)
+        settings.SetPreviewHealthBarVisible(false)
         settings.SetPreviewChamColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
         settings.SetPreviewBoxColor(Color3.fromRGB(255, 255, 255), Color3.fromRGB(0, 0, 0));
     end;
