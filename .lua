@@ -1687,7 +1687,10 @@ function library:init_window(cfg)
         end
 
         settings.TogglePreviewVisibility(true)
+        settings.SetPreviewNameProperty(true)
         settings.SetPreviewBoxVisible(true)
+        settings.SetPreviewDistanceProperty(true)
+        settings.SetPreviewWeaponProperty(true)
         settings.SetPreviewHealthBarVisible(true)
         settings.SetPreviewChamColor(Color3.fromRGB(208, 123, 255), Color3.fromRGB(0, 0, 0), 0.3, 0.5);
         settings.SetPreviewBoxColor(Color3.fromRGB(208, 123, 255), Color3.fromRGB(0, 0, 0));
