@@ -1634,21 +1634,10 @@ function library:init_window(cfg)
         local esp_weapon = utility.create("Text", {Text = "Weapon", Parent = inner_window, Visible = false, Transparency = 1, Color = Color3.fromRGB(255, 255, 255), Size = 13, Center = true, Outline = true, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 115, 0, 286), ZIndex = 6});
 
         -- // Functions
-        settings.SetPreviewChamColor = function(Color, Outline, Alpha, AlphaOutline)
+        settings.SetPreviewChamColor = function(Color)
             esp_head.Color = Color
-            esp_head_outline.Color = Outline
-            esp_head.Transparency = Alpha;
-            esp_head_outline.Transparency = AlphaOutline;
-
             esp_torso.Color = Color
-            esp_torso_outline.Color = Outline
-            esp_torso.Transparency = Alpha;
-            esp_torso_outline.Transparency = AlphaOutline;
-
             esp_legs.Color = Color
-            esp_legs_outline.Color = Outline
-            esp_legs.Transparency = Alpha;
-            esp_legs_outline.Transparency = AlphaOutline;
         end;
 
         settings.SetPreviewBoxColor = function(Color, Outline)
